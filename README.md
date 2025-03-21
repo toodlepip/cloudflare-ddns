@@ -1,6 +1,10 @@
 # Cloudflare Dynamic DNS Updater
 
-This script updates a Cloudflare DNS record dynamically when the public IP address changes.
+This script updates a Cloudflare DNS record dynamically when the public IP address changes. It's going to come in handy if you have a server hosted on an ISP that allocated IP addresses via DHCP.
+
+The script is written for Linux/macOS but could be easiliy adapted for other environments. Logging, error reporting and logrotation are handled on the first run, if they're not set up.
+
+Error reporting via email will only be triggered, on error, if the email settings are included in settings.py.
 
 ## How It Works
 
@@ -20,7 +24,7 @@ This script updates a Cloudflare DNS record dynamically when the public IP addre
 
 1. Clone this repository:
    ```sh
-   git clone https://github.com/yourusername/cloudflare-ddns.git
+   git clone https://github.com/toodlepip/cloudflare-ddns.git
    cd cloudflare-ddns
    ```
 
@@ -57,16 +61,16 @@ This script updates a Cloudflare DNS record dynamically when the public IP addre
 ## Usage
 
 - Run the script manually:
-  ```
+  ```sh
   sudo python3 cf-update-dns.py
   ```
 
 - Automate using a cron job:
-  ```
+  ```sh
   sudo vi /etc/crontab
   ```
   Add the following line to run the script every hour at 15 minutes past the hour:
-  ```
+  ```sh
   15 * * * * root /usr/bin/python3 /var/local/cloudflare-ddns/cf-update-dns.py
   ```
 
