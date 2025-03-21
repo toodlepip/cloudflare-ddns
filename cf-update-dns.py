@@ -120,6 +120,12 @@ def send_error_email(error_message):
     subject = "Pickle: Cloudflare DDNS Update Error"
     body = f"An error occurred during the Cloudflare DDNS update:\n\n{error_message}"
 
+    # Ensure email settings are present
+    required_settings = [SMTP_SERVER, SMTP_PORT, SMTP_USERNAME, SMTP_PASSWORD, EMAIL_FROM, EMAIL_TO]
+    if any(setting in [None, ""] for setting in required_settings):
+        logging.warning("Skipping error email: SMTP settings are not fully configured.")
+        return
+
     msg = MIMEText(body)
     msg["Subject"] = subject
     msg["From"] = EMAIL_FROM
