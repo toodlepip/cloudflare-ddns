@@ -1,0 +1,32 @@
+# Ignore settings.py
+settings.py
+
+# Ignore compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore logs
+*.log
+logs/
+*.out
+
+# Ignore virtual environments
+venv/
+.env/
+*.venv
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore dependency files
+pip-log.txt
+pip-delete-this-directory.txt
+*.lock
+
+# Ignore IDE/editor config
+.vscode/
+.idea/
+*.sublime-workspace
