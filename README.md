@@ -128,4 +128,4 @@ Error reporting via email will only be triggered, on error, if the email setting
 
 ## License
 
-MIT License
+This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
