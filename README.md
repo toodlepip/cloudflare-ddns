@@ -54,7 +54,33 @@ Error reporting via email will only be triggered, on error, if the email setting
  
  By following these steps, you ensure that the API token has permissions limited to the specified domain, enhancing the security of your Cloudflare account.
  
- ## Setup
+## Finding Your Cloudflare Zone ID
+
+To retrieve your Cloudflare Zone ID, follow these steps:
+
+1. **Log in to Cloudflare Dashboard**:
+   - Navigate to the [Cloudflare dashboard](https://dash.cloudflare.com/) and select your account.
+
+2. **Select Your Domain**:
+   - From your list of domains, click on the domain for which you need the Zone ID.
+
+3. **Access the Overview Page**:
+   - Upon selecting your domain, you'll be directed to the **Overview** page.
+
+4. **Locate the API Section**:
+   - On the right-hand side of the Overview page, find the **API** section.
+
+5. **Find Your Zone ID**:
+   - Within the API section, your **Zone ID** will be displayed.
+
+An example of a Cloudflare Zone ID:
+```
+023e105f4ecef8ad9ca31a8372d0c353
+```
+
+For more detailed information, refer to Cloudflare's official documentation on [finding your Zone and Account IDs](https://developers.cloudflare.com/fundamentals/setup/find-account-and-zone-ids/).
+
+## Setup
 
 1. Clone this repository:
    ```sh
