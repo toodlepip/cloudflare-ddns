@@ -155,3 +155,7 @@ For more detailed information, refer to Cloudflare's official documentation on [
 ## License
 
 This project is licensed under the MIT License - see the [MIT License](https://opensource.org/licenses/MIT) for details.
+
+## Thanks
+
+Thanks to [Akash Rajpurohit](https://akashrajpurohit.com/blog/dynamic-dns-made-easy-with-cloudflare-api/#) whose original blog post inspired this approach.
