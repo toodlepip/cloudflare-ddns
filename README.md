@@ -2,7 +2,7 @@
 
 This script updates a Cloudflare DNS record dynamically when the public IP address changes. It's going to come in handy if you have a server hosted on an ISP that allocated IP addresses via DHCP.
 
-The script is written for Linux/macOS but could be easiliy adapted for other environments. Logging, error reporting and logrotation are handled on the first run, if they're not set up.
+The script is written for Linux/macOS but could be easily adapted for other environments. Logging, error reporting and log rotation are handled on the first run, if they're not set up.
 
 Error reporting via email will only be triggered, on error, if the email settings are included in settings.py.
 
@@ -51,11 +51,6 @@ Error reporting via email will only be triggered, on error, if the email setting
    SMTP_PASSWORD = "your-smtp-password"
    EMAIL_FROM = "your-email@example.com"
    EMAIL_TO = "your-email@example.com"
-   ```
-
-5. Ensure `settings.py` is ignored by Git:
-   ```sh
-   echo "settings.py" >> .gitignore
    ```
 
 ## Usage
